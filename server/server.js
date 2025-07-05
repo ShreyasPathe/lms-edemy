@@ -19,7 +19,7 @@ await connectCloudinary()
 // Middlewares
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://edemy-copy-client.vercel.app', 'https://edemy-lms-client.vercel.app'] 
+    ? ['https://lms-edemy-nu.vercel.app','https://edemy-copy-client.vercel.app', 'https://edemy-lms-client.vercel.app',] 
     : ['http://localhost:3000'],
   credentials: true
 }))
@@ -35,3 +35,11 @@ app.use('/api/user', express.json(), userRouter)
 
 // Export for Vercel
 export default app
+
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+  })
+}
