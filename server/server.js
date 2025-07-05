@@ -19,7 +19,7 @@ await connectCloudinary()
 // Middlewares
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://lms-edemy-nu.vercel.app','https://edemy-copy-client.vercel.app', 'https://edemy-lms-client.vercel.app',] 
+    ? true  // Allow all origins in production
     : ['http://localhost:3000'],
   credentials: true
 }))
