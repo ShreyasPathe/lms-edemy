@@ -17,7 +17,12 @@ await connectDB()
 await connectCloudinary()
 
 // Middlewares
-app.use(cors())
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? ['https://edemy-copy-client.vercel.app', 'https://edemy-lms-client.vercel.app'] 
+    : ['http://localhost:3000'],
+  credentials: true
+}))
 app.use(clerkMiddleware())
 
 // Routes
@@ -28,9 +33,5 @@ app.use('/api/educator', express.json(), educatorRouter)
 app.use('/api/course', express.json(), courseRouter)
 app.use('/api/user', express.json(), userRouter)
 
-// Port
-const PORT = process.env.PORT || 5000
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-})
+// Export for Vercel
+export default app
