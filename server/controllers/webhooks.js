@@ -26,36 +26,36 @@ export const clerkWebhooks = async (req, res) => {
     // Switch Cases for differernt Events
     switch (type) {
       case 'user.created': {
-
         const userData = {
           _id: data.id,
-          email: data.email_addresses[0].email_address,
-          name: data.first_name + " " + data.last_name,
-          imageUrl: data.image_url,
-          resume: ''
+          email: (data.email_addresses && data.email_addresses[0] && data.email_addresses[0].email_address) || "",
+          name: (data.first_name || "") + " " + (data.last_name || ""),
+          imageUrl: data.image_url || data.profile_image_url || "",
         }
-        await User.create(userData)
-        res.json({})
+        // Use upsert to avoid duplicate key errors
+        await User.findByIdAndUpdate(userData._id, userData, { upsert: true, new: true });
+        res.json({ success: true });
         break;
       }
 
       case 'user.updated': {
         const userData = {
-          email: data.email_addresses[0].email_address,
-          name: data.first_name + " " + data.last_name,
-          imageUrl: data.image_url,
+          email: (data.email_addresses && data.email_addresses[0] && data.email_addresses[0].email_address) || "",
+          name: (data.first_name || "") + " " + (data.last_name || ""),
+          imageUrl: data.image_url || data.profile_image_url || "",
         }
-        await User.findByIdAndUpdate(data.id, userData)
-        res.json({})
+        await User.findByIdAndUpdate(data.id, userData, { upsert: true, new: true });
+        res.json({ success: true });
         break;
       }
 
       case 'user.deleted': {
         await User.findByIdAndDelete(data.id)
-        res.json({})
+        res.json({ success: true });
         break;
       }
       default:
+        res.json({ success: true, message: 'Unhandled event type' });
         break;
     }
 

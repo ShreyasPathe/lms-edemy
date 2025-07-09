@@ -41,3 +41,25 @@
 .rich-text ul { margin-left: 30px; list-style-type: disc; }
 
 .rich-text li { margin-bottom: 8px; }
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 18s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
