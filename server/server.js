@@ -18,9 +18,10 @@ await connectCloudinary()
 
 // Middlewares
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? true  // Allow all origins in production
-    : ['http://localhost:3000'],
+  origin: [
+    'http://localhost:3000',
+    'https://lms-edemy-nu.vercel.app'
+  ],
   credentials: true
 }))
 app.use(clerkMiddleware())
