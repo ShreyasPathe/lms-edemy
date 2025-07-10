@@ -23,8 +23,9 @@ app.use(cors({
       'http://localhost:3000',
       'https://lms-edemy-nu.vercel.app'
     ];
-    // Allow all vercel.app subdomains
+    // Allow all vercel.app subdomains and requests with no origin (like server-to-server or health checks)
     if (
+      !origin || // allow requests with no origin
       allowed.includes(origin) ||
       (origin && origin.endsWith('.vercel.app'))
     ) {
