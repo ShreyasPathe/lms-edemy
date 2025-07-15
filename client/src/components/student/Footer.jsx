@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 md:px-36 text-left w-full mt-10">
+    <footer className="bg-cyan-700 md:px-36 text-left w-full mt-10">
       <div className="flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-gray-200">
 
         <div className="flex flex-col md:items-start items-center w-full">
@@ -30,7 +30,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-2 pt-4">
             <input className="border border-gray-300 bg-white text-gray-700 placeholder-gray-400 outline-none w-64 h-9 rounded px-2 text-sm" type="email" placeholder="Enter your email" />
-            <button className="bg-violet-600 hover:bg-violet-700 w-24 h-9 text-white rounded transition-colors">Subscribe</button>
+            <button className="bg-blue-600 w-24 h-9 text-white rounded transition-colors">Subscribe</button>
           </div>
         </div>
 
