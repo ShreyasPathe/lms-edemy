@@ -97,10 +97,10 @@ body, .bg-white {
 }
 
 :root {
-  --bg-main: #1a2233;
-  --bg-card: #232b3e;
-  --accent: #6366f1;
-  --text-main: #f3f4f6;
-  --text-secondary: #a5b4fc;
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --accent: #a78bfa;
+  --text-main: #f1f5f9;
+  --text-secondary: #a5f3fc;
   --border: #334155;
 }
