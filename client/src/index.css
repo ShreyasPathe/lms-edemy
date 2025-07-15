@@ -95,3 +95,12 @@ body, .bg-white {
 .bg-cyan-100\/70, .bg-gray-900, .bg-gray-800, .bg-gray-500\/10 {
   background: #23272f !important;
 }
+
+:root {
+  --bg-main: #1a2233;
+  --bg-card: #232b3e;
+  --accent: #6366f1;
+  --text-main: #f3f4f6;
+  --text-secondary: #a5b4fc;
+  --border: #334155;
+}
