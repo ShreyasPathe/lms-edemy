@@ -2,14 +2,16 @@ import React, { useContext } from 'react'
 import { assets } from '../../assets/assets'
 import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../../context/AppContext'
+import { useClerk } from '@clerk/clerk-react'
 
 const CallToAction = () => {
   const navigate = useNavigate();
   const { userData } = useContext(AppContext);
+  const { openSignIn } = useClerk();
 
   const handleGetStarted = () => {
     if (!userData) {
-      navigate('/sign-in'); // Adjust this path if your login route is different
+      openSignIn();
     } else {
       navigate('/');
       window.scrollTo({ top: 0, behavior: 'smooth' });
