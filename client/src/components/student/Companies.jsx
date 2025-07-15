@@ -9,15 +9,15 @@ const companyLogos = [
   { src: assets.paypal_logo, alt: "Paypal" },
 ];
 
-// Repeat enough times for a seamless infinite loop
-const repeatedLogos = Array(6).fill(companyLogos).flat();
+// Repeat enough times for a seamless infinite loop (use a large repeat count)
+const repeatedLogos = Array(20).fill(companyLogos).flat();
 
 const Companies = () => {
   return (
     <div className="pt-16 bg-white">
       <p className="text-base text-gray-500">Trusted by learners from</p>
       <div className="marquee-container">
-        <div className="marquee">
+        <div className="marquee" style={{ minWidth: '300vw' }}>
           {repeatedLogos.map((logo, idx) => (
             <img
               key={idx}

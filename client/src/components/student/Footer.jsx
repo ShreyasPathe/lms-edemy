@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 md:px-36 text-left w-full mt-10">
+    <footer className="bg-blue-500 md:px-36 text-left w-full mt-10">
       <div className="flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-white/30">
 
         <div className="flex flex-col md:items-start items-center w-full">
@@ -29,8 +29,8 @@ const Footer = () => {
             The latest news, articles, and resources, sent to your inbox weekly.
           </p>
           <div className="flex items-center gap-2 pt-4">
-            <input className="border border-gray-500/30 bg-blue-500 text-white placeholder-white outline-none w-64 h-9 rounded px-2 text-sm" type="email" placeholder="Enter your email" />
-            <button className="bg-white w-24 h-9 text-blue-600 rounded">Subscribe</button>
+            <input className="border border-gray-500/30 bg-blue-400 text-white placeholder-white outline-none w-64 h-9 rounded px-2 text-sm" type="email" placeholder="Enter your email" />
+            <button className="bg-white w-24 h-9 text-blue-500 rounded">Subscribe</button>
           </div>
         </div>
 
