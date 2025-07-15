@@ -97,21 +97,21 @@ export const dummyTestimonial = [
         role: 'SWE 1 @ Amazon',
         image: assets.profile_img_1,
         rating: 5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'I appreciate how Edemy makes education accessible anytime, anywhere. The mobile-friendly design means I can keep learning even on the go!',
     },
     {
         name: 'Richard Nelson',
         role: 'SWE 2 @ Samsung',
         image: assets.profile_img_2,
         rating: 4,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'The variety of courses and the quality of instructors on Edemy is outstanding. I was able to upskill quickly and land a new job thanks to the practical lessons and real-world projects.',
     },
     {
         name: 'James Washington',
         role: 'SWE 2 @ Google',
         image: assets.profile_img_3,
         rating: 4.5,
-        feedback: 'I\'ve been using Imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.',
+        feedback: 'Edemy has completely transformed the way I learn online. The courses are well-structured, and the platform is incredibly user-friendly. I love being able to track my progress and learn at my own pace!',
     },
 ];
 
