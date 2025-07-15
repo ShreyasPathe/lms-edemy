@@ -14,8 +14,8 @@ const repeatedLogos = Array(6).fill(companyLogos).flat();
 
 const Companies = () => {
   return (
-    <div className="pt-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
-      <p className="text-base text-gray-300">Trusted by learners from</p>
+    <div className="pt-16 bg-white">
+      <p className="text-base text-gray-500">Trusted by learners from</p>
       <div className="marquee-container">
         <div className="marquee">
           {repeatedLogos.map((logo, idx) => (
